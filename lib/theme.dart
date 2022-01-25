@@ -4,10 +4,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 //Dark Theme
 const Color kDarkCanvasColor = Color(0xFF252834);
-const Color kDarkBackgroundColor = Color(0xFF1E2128);
+const Color kDarkBackgroundColor = Color(0xFF2F3440);
+const Color kDarkBackgroundSecondaryColor = Color(0xFF363840);
 
-const Color kDarkAccentColor = Color(0xFF5873FF);
-const Color kDarkSecondaryColor = Color(0xFF5267de);
+const Color kDarkActiveMenuColor = Colors.white;
+
+const Color kDarkAccentColor = Color(0xFFb259b4);
+const Color kDarkSecondaryColor = Color(0xFFAAACB6);
 const Color kDarkTertiaryColor = Color(0xFF989a9f);
 
 const Color kDarkPrimaryTextColor = Colors.white;
@@ -22,8 +25,11 @@ ThemeData darkTheme = ThemeData(
   primaryColor: kDarkAccentColor,
   secondaryHeaderColor: kDarkSecondaryColor,
   iconTheme: const IconThemeData(
-    color: kDarkPrimaryTextColor,
+    color: kDarkSecondaryColor,
   ),
+  highlightColor: Colors.transparent,
+  splashColor: Colors.transparent,
+  hoverColor: Colors.transparent,
   fontFamily: GoogleFonts.poppins().fontFamily,
   textTheme: const TextTheme(
     headline3: TextStyle(color: kDarkPrimaryTextColor),
