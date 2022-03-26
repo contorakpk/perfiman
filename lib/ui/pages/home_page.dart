@@ -199,48 +199,183 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(kDefaultPadding * 1.35),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  child: Column(
                     children: [
-                      const Text(
-                        '  Welcome, FluSett',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: kDarkPrimaryTextColor,
-                          fontSize: 34,
-                        ),
-                      ),
-                      Container(
-                        height: 50,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: kDefaultPadding,
-                        ),
-                        decoration: BoxDecoration(
-                          color: kDarkBackgroundSecondaryColor,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Row(
-                          children: const [
-                            Icon(
-                              Icons.ac_unit,
-                              size: 22,
-                              color: Colors.purple,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            '  Welcome, FluSett',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.3,
+                              color: kDarkPrimaryTextColor,
+                              fontSize: 34,
                             ),
-                            Text(
-                              '    Last month    ',
-                              style: TextStyle(
-                                color: kDarkSecondaryTextColor,
-                                fontSize: 14,
-                              ),
+                          ),
+                          Container(
+                            height: 50,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding,
                             ),
-                            Icon(
-                              Icons.ac_unit,
-                              size: 15,
+                            decoration: BoxDecoration(
+                              color: kDarkBackgroundSecondaryColor,
+                              borderRadius: BorderRadius.circular(16),
                             ),
-                          ],
-                        ),
+                            child: Row(
+                              children: const [
+                                Icon(
+                                  Icons.ac_unit,
+                                  size: 22,
+                                  color: Colors.purple,
+                                ),
+                                Text(
+                                  '    Last month    ',
+                                  style: TextStyle(
+                                    color: kDarkSecondaryTextColor,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.ac_unit,
+                                  size: 15,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ],
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(kDefaultPadding * 1.35),
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 3,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: kDefaultPadding * 1.5,
+                                vertical: kDefaultPadding),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF30343F),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      'Categories',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                        color: kDarkSecondaryTextColor,
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.add_circle,
+                                      color: Color(0xFF3E7675),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: kDefaultPadding),
+                                Expanded(
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.vertical,
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Container(
+                                          height: 70,
+                                          width: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF373B46),
+                                            borderRadius:
+                                                BorderRadius.circular(16),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              const SizedBox(
+                                                  width: kDefaultPadding),
+                                              Container(
+                                                height: 40,
+                                                width: 40,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white10,
+                                                  borderRadius:
+                                                      BorderRadius.circular(12),
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                  width: kDefaultPadding),
+                                              Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: const [
+                                                  Text(
+                                                    'Shopping',
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                      height:
+                                                          kDefaultPadding / 8),
+                                                  Text(
+                                                    '200\$',
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      color: Colors.white54,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              const Spacer(),
+                                              const Text(
+                                                '2 operations',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.white54,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                  width: kDefaultPadding),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(height: kDefaultPadding),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: kDefaultPadding * 2),
+                        Expanded(
+                          flex: 7,
+                          child: Container(
+                            color: Colors.yellow,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
