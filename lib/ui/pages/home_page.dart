@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                           width: 55,
                           decoration: BoxDecoration(
                             color: kDarkBackgroundSecondaryColor,
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(16),
                           ),
                           child: const Icon(
                             Icons.abc,
@@ -54,6 +54,9 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           width: 1,
                           height: double.infinity,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: kDefaultPadding * 2,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.transparent,
                             border: Border.symmetric(
@@ -62,6 +65,78 @@ class _HomePageState extends State<HomePage> {
                                 width: 1,
                               ),
                             ),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 55,
+                                width: 111,
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: kDefaultPadding),
+                                decoration: BoxDecoration(
+                                  color: kDarkBackgroundSecondaryColor,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'USD',
+                                      style: TextStyle(
+                                        color: kDarkSecondaryTextColor,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Icon(
+                                      Icons.ac_unit,
+                                      size: 15,
+                                    ), //TODO Change icon
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: kDefaultPadding),
+                              Container(
+                                height: 55,
+                                width: 111,
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: kDefaultPadding),
+                                decoration: BoxDecoration(
+                                  color: kDarkBackgroundSecondaryColor,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'Eng',
+                                      style: TextStyle(
+                                        color: kDarkSecondaryTextColor,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Icon(
+                                      Icons.ac_unit,
+                                      size: 15,
+                                    ), //TODO Change icon
+                                  ],
+                                ),
+                              ),
+                              const Spacer(),
+                              Container(
+                                height: 55,
+                                width: 55,
+                                decoration: BoxDecoration(
+                                  color: kDarkBackgroundSecondaryColor,
+                                  borderRadius: BorderRadius.circular(14),
+                                ),
+                                child: const Icon(
+                                  Icons.abc,
+                                  size: 30,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -73,11 +148,25 @@ class _HomePageState extends State<HomePage> {
                           width: 55,
                           decoration: BoxDecoration(
                             color: kDarkBackgroundSecondaryColor,
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(16),
                           ),
-                          child: const Icon(
-                            Icons.abc,
-                            size: 30,
+                          child: Stack(
+                            children: const [
+                              Center(
+                                child: Icon(
+                                  Icons.abc,
+                                  size: 30,
+                                ),
+                              ),
+                              Positioned(
+                                left: 35,
+                                top: 15,
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.purple,
+                                  radius: 5,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -91,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                         'FluSett',
                         style: TextStyle(
                           fontSize: 14,
-                          color: Colors.white70,
+                          color: kDarkSecondaryTextColor,
                           fontWeight: FontWeight.normal,
                         ),
                       ),

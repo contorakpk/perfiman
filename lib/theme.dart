@@ -14,7 +14,7 @@ const Color kDarkSecondaryColor = Color(0xFFAAACB6);
 const Color kDarkTertiaryColor = Color(0xFF989a9f);
 
 const Color kDarkPrimaryTextColor = Colors.white;
-const Color kDarkSecondaryTextColor = Colors.white60;
+const Color kDarkSecondaryTextColor = Colors.white70;
 
 //Light Theme
 
