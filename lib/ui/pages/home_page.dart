@@ -197,7 +197,52 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: kDefaultPadding),
+                Padding(
+                  padding: const EdgeInsets.all(kDefaultPadding * 1.35),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        '  Welcome, FluSett',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: kDarkPrimaryTextColor,
+                          fontSize: 34,
+                        ),
+                      ),
+                      Container(
+                        height: 50,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: kDefaultPadding,
+                        ),
+                        decoration: BoxDecoration(
+                          color: kDarkBackgroundSecondaryColor,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Row(
+                          children: const [
+                            Icon(
+                              Icons.ac_unit,
+                              size: 22,
+                              color: Colors.purple,
+                            ),
+                            Text(
+                              '    Last month    ',
+                              style: TextStyle(
+                                color: kDarkSecondaryTextColor,
+                                fontSize: 14,
+                              ),
+                            ),
+                            Icon(
+                              Icons.ac_unit,
+                              size: 15,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
