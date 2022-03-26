@@ -358,7 +358,7 @@ class _HomePageState extends State<HomePage> {
                                             ],
                                           ),
                                         ),
-                                        SizedBox(height: kDefaultPadding),
+                                        const SizedBox(height: kDefaultPadding),
                                       ],
                                     ),
                                   ),
@@ -370,8 +370,366 @@ class _HomePageState extends State<HomePage> {
                         const SizedBox(width: kDefaultPadding * 2),
                         Expanded(
                           flex: 7,
-                          child: Container(
-                            color: Colors.yellow,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 170,
+                                width: double.infinity,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        padding: const EdgeInsets.all(
+                                          kDefaultPadding,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: kDarkBackgroundSecondaryColor,
+                                          borderRadius:
+                                              BorderRadius.circular(16),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            CircleAvatar(
+                                              backgroundColor: Colors.purple,
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              'Total income',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                                color: Colors.white54,
+                                              ),
+                                            ),
+                                            SizedBox(height: 3),
+                                            Text(
+                                              '\$1,340',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                letterSpacing: 1.3,
+                                                color: kDarkPrimaryTextColor,
+                                                fontSize: 28,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: kDefaultPadding),
+                                    Expanded(
+                                      child: Container(
+                                        padding: const EdgeInsets.all(
+                                          kDefaultPadding,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: kDarkBackgroundSecondaryColor,
+                                          borderRadius:
+                                              BorderRadius.circular(16),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            CircleAvatar(
+                                              backgroundColor: Colors.blue,
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              'Total income',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                                color: Colors.white54,
+                                              ),
+                                            ),
+                                            SizedBox(height: 3),
+                                            Text(
+                                              '\$12,340',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                letterSpacing: 1.3,
+                                                color: kDarkPrimaryTextColor,
+                                                fontSize: 28,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: kDefaultPadding),
+                                    Expanded(
+                                      child: Container(
+                                        padding: const EdgeInsets.all(
+                                          kDefaultPadding,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: kDarkBackgroundSecondaryColor,
+                                          borderRadius:
+                                              BorderRadius.circular(16),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            CircleAvatar(
+                                              backgroundColor: Colors.yellow,
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              'Total income',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                                color: Colors.white54,
+                                              ),
+                                            ),
+                                            SizedBox(height: 3),
+                                            Text(
+                                              '\$4,680',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                letterSpacing: 1.3,
+                                                color: kDarkPrimaryTextColor,
+                                                fontSize: 28,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: kDefaultPadding),
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Theme.of(context).cardColor,
+                                    ),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: kDefaultPadding * 1.3,
+                                          horizontal: kDefaultPadding,
+                                        ),
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        height: 250,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(16),
+                                          image: const DecorationImage(
+                                            fit: BoxFit.fill,
+                                            image: AssetImage(
+                                                'assets/images/purple_bg.jpg'),
+                                          ),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            const Text(
+                                              'You can download our app',
+                                              style: TextStyle(
+                                                fontSize: 28,
+                                                color: kDarkPrimaryTextColor,
+                                                letterSpacing: 1.1,
+                                              ),
+                                            ),
+                                            const SizedBox(height: 5),
+                                            const Text(
+                                              'for Windows, Linux, Android and IOS',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                color: kDarkSecondaryTextColor,
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                                height: kDefaultPadding * 1.5),
+                                            ElevatedButton(
+                                              onPressed: () => null,
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Colors.purple
+                                                    .withOpacity(0.8),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(16),
+                                                ),
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                  vertical:
+                                                      kDefaultPadding * 1.2,
+                                                  horizontal:
+                                                      kDefaultPadding * 2.7,
+                                                ),
+                                              ),
+                                              child: const Text(
+                                                'Download page',
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                            vertical: kDefaultPadding),
+                                        width: double.infinity,
+                                        height: 1,
+                                        color: Theme.of(context).cardColor,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: kDefaultPadding),
+                                        child: Column(
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: const [
+                                                Text(
+                                                  'Operations',
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    color:
+                                                        kDarkSecondaryTextColor,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  'See all',
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    color: Color(0xFF3E7675),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            const SizedBox(
+                                                height: kDefaultPadding),
+                                            SingleChildScrollView(
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        height: 45,
+                                                        width: 45,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.blue,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(14),
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                          width:
+                                                              kDefaultPadding /
+                                                                  1.5),
+                                                      const Text(
+                                                        'Dubai Design Week 2021',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color:
+                                                              kDarkPrimaryTextColor,
+                                                        ),
+                                                      ),
+                                                      const Spacer(),
+                                                      const Text(
+                                                        'DEC 12, 2021, 09:40',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color:
+                                                              kDarkSecondaryTextColor,
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                          width:
+                                                              kDefaultPadding),
+                                                      const Text(
+                                                        '1,400\$',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color:
+                                                              kDarkPrimaryTextColor,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  const SizedBox(
+                                                      height: kDefaultPadding),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        height: 45,
+                                                        width: 45,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.yellow,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(14),
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                          width:
+                                                              kDefaultPadding /
+                                                                  1.5),
+                                                      const Text(
+                                                        'Dubai Design Week 2021',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color:
+                                                              kDarkPrimaryTextColor,
+                                                        ),
+                                                      ),
+                                                      const Spacer(),
+                                                      const Text(
+                                                        'DEC 12, 2021, 09:40',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color:
+                                                              kDarkSecondaryTextColor,
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                          width:
+                                                              kDefaultPadding),
+                                                      const Text(
+                                                        '1,400\$',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color:
+                                                              kDarkPrimaryTextColor,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
